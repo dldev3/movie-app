@@ -7,6 +7,7 @@
     <title>Movie Search</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <livewire:styles />
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <nav class="border-b border-gray-800">
@@ -27,14 +28,10 @@
             </ul>
             
             <div class="flex flex-col md:flex-row items-center">
-                <div class="relative mt-3 md:mt-0">
-                    <input type="text" 
-                           class="bg-gray-800 rounded-full w-64 pl-8 px-4 py-1 focus:outline-none focus:shadow-outline" 
-                           placeholder="Search">
-                    <div class="absolute top-0">
-                        <i class="fa fa-search fill-current text-gray-500 mt-2 ml-2"></i>
-                    </div>
-                </div>
+                
+               <livewire:search-dropdown>
+
+
                 <div class="md:ml-4 md:mt-0 mt-3">
                     <a href="#">
                         <i class="fa fa-user rounded-full w-8 h-8"></i>
@@ -46,5 +43,6 @@
     </nav>
     
     @yield('content')
+    <livewire:scripts />
 </body>
 </html>
