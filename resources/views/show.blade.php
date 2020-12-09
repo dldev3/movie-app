@@ -58,8 +58,7 @@
                     <a href="#">
                         <img src="#" alt="parasite" class="hover:opacity-75 transition ease-in-out duration-150">
                     </a>
-                </div>
-                <div class="mt-2">
+                    <div class="mt-2">
                     <a href="#" class="text-lg mt-2 hover:text-gray-300">Parasite</a>
                     <div class="flex items-center text-gray-400 text-sm mt-1">
                         <svg class="fill-current text-yellow-500 w-4" viewBox="0 -10 511.98685 511">
@@ -74,6 +73,8 @@
                         Action,Thriller,Comedy
                     </div>
                 </div>
+                </div>
+                
             </div>
         </div>
 
