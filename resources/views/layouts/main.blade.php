@@ -13,10 +13,10 @@
     	<div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-6">
     		<ul class="flex flex-col md:flex-row items-center">
     			<li>
-    				<a href="#"><i class="fa fa-film"></i> Movie App</a>
+    				<a href="{{ route('movies.index') }}"><i class="fa fa-film"></i> Movie App</a>
     			</li>
     			<li class="md:ml-16 md:mt-0">
-    				<a href="#" class="hover:text-gray-300">Movies</a>
+                <a href="{{ route('movies.index') }}" class="hover:text-gray-300">Movies</a>
     			</li>
     			<li class="md:ml-6 md:mt-0">
     				<a href="#" class="hover:text-gray-300">TV Shows</a>
