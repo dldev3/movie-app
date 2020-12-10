@@ -1,8 +1,11 @@
 <div>
-    <div class="relative mt-3 md:mt-0">
+    <div class="relative mt-3 md:mt-0" x-data="{ isOpen: true }" @click.away="isOpen = false">
                     <input wire:model.debounce.500ms="search" type="text" 
                            class="bg-gray-800 rounded-full w-64 pl-8 px-4 py-1 focus:outline-none focus:shadow-outline" 
-                           placeholder="Search">
+                           placeholder="Search"
+                           @focus="isOpen = true"
+                           @keydown.escape.window="isOpen = false"
+                           >
                     <div class="absolute top-0">
                         <i class="fa fa-search fill-current text-gray-500 mt-2 ml-2"></i>
                     </div>
@@ -13,7 +16,12 @@
     </div>
 
     @if (strlen($search) >= 2)
-    <div class="absolute bg-gray-800 text-sm rounded w-64 mt-4">
+    <div 
+        class="absolute bg-gray-800 text-sm rounded w-64 mt-4" 
+        x-show="isOpen"
+        @keydown.escape.window="isOpen = false"
+        >
+
             @if($searchResults->count() > 0)
                 <ul>
                     @foreach($searchResults as $result)
